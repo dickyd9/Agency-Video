@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        // Owl Carousel
+        var owl = $(".owl-carousel");
+        owl.owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: false,
+          autoplay: true,
+          autoplayHoverPause: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 3,
+            },
+            1000: {
+              items: 5,
+            },
+          },
+        });
+      });
+    </script>
+    <title>Video Agency</title>
+  </head>
+
+  <!-- <div id="preloader" class="loader">
+    <div id="loader"></div>
+</div> -->
+
+  <body>
+    <header>
+      <nav id="nav" class="px-40 py-6 w-full flex justify-between">
+        <a href="">Logo</a>
+        <div class="nav-menu">
+          <a href="./index.html" class="active">Home</a>
+          <a href="./aboutUs.html" class="active">About Us</a>
+          <a href="./services.html" class="active">Services</a>
+          <a href="./contact.html" class="active">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <section id="about-header">
+      <div class="breadcrumb">
+        <div class="">
+          <h1>Our Services</h1>
+        </div>
+        <div class="breadcrumb-part">
+          <h3>#</h3>
+          <h3>/</h3>
+          <h3>Our Services</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="services-all">
+        <div class="container">
+
+        </div>
+    </section>
+
+    <footer>
+      <h1>LIMAEMPAT PRODUCTION</h1>
+      <div class="body-footer">
+        <p>
+          Limaempat Production memberikan solusi untuk para perusahaan agar
+          lebih efisien untuk penyebaran informasi yang sangatlah luas.
+        </p>
+      </div>
+      <div class="social-media">
+        <a href="">
+          <img src="/assets/img/social-media/instagram.png" alt="" />
+        </a>
+        <a href="">
+          <img src="/assets/img/social-media/linkedin.png" alt="" />
+        </a>
+        <a href="">
+          <img src="/assets/img/social-media/youtube.png" alt="" />
+        </a>
+      </div>
+    </footer>
+
+    <div class="fixed bottom-0 right-0 m-10">
+      <button
+        onclick="topFunction()"
+        id="myBtn"
+        class="bg-white p-2 rounded-full text-black hover:bg-black hover:text-white"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="4"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 15.75l7.5-7.5 7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <script text="js">
+      var myNav = document.getElementById("nav");
+      let mybutton = document.getElementById("myBtn");
+
+      window.onscroll = function () {
+        "use strict";
+        if (
+          document.body.scrollTop >= 60 ||
+          document.documentElement.scrollTop >= 60
+        ) {
+          myNav.classList.add("scroll");
+          mybutton.style.display = "block";
+        } else {
+          myNav.classList.remove("scroll");
+          mybutton.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
