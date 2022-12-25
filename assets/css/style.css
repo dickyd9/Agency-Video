@@ -95,7 +95,7 @@ footer {
   display: grid;
   justify-content: center;
   width: 100%;
-  padding: 40px 120px;
+  padding: 40px 120px 0;
 }
 
 footer h1 {
@@ -128,6 +128,17 @@ footer .body-footer p {
   font-weight: 400;
   line-height: 26px;
   margin: 0 0 15px 0;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: small;
 }
 
 .scroll {
@@ -220,6 +231,7 @@ footer .body-footer p {
   align-items: center;
   justify-items: center;
   gap: 8px;
+  color: #ffffff;
 }
 
 .breadcrumb .breadcrumb-part {
@@ -250,13 +262,14 @@ footer .body-footer p {
   }
 
   .nav-menu a {
+    opacity: 100%;
     font-weight: 600;
     font-stretch: extra-condensed;
   }
 
-  .nav-menu a .active {
+  .nav-menu .active {
+    opacity: 50%;
     height: 2px;
-    color: #222222;
   }
 
   .hero {
@@ -287,9 +300,15 @@ footer .body-footer p {
     display: flex;
     justify-content: center;
     width: 100%;
+    background-size: cover;
+    background-image: url(../img/bg/workdesk.jpeg);
+  }
+
+  #services .overlay {
+    background-color: #222222cf;
+    width: 100%;
     padding-bottom: 60px;
     padding-top: 110px;
-    background-size: cover;
   }
 
   #services .container {
@@ -387,7 +406,17 @@ footer .body-footer p {
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: #22222274;
+    background-image: #222222a0;
+  }
+
+  .item .play-button img {
+    width: 80px;
+    opacity: 50%;
+  }
+
+  .item .play-button img:hover {
+    width: 80px;
+    opacity: 100%;
   }
 
   .item:nth-child(1) {
@@ -417,7 +446,7 @@ footer .body-footer p {
   /* styling code */
 
   .grid {
-    margin: 20px auto;
+    margin: 5px auto;
     max-width: 100%;
   }
 
@@ -429,8 +458,8 @@ footer .body-footer p {
 
   #client {
     width: 100%;
-    padding: 20px 0;
-    background-color: #adadad;
+    padding: 40px 0;
+    background-color: #ffffff;
   }
 
   #client .client-img {
@@ -542,13 +571,19 @@ footer .body-footer p {
 
   /* About Us */
   #about-header {
-    display: grid;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 50vh;
     background-size: cover;
     background-image: url(https://images.unsplash.com/photo-1493805503700-3219b693ffcc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  }
+
+  #about-header .overlay {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #000000c9;
   }
 
   #about-us {
@@ -557,13 +592,24 @@ footer .body-footer p {
     align-items: center;
     width: 100%;
     height: 100vh;
-    padding: 0 120px;
+    background-size: cover;
+    background-image: url(../img/bg/bg-1.jpg);
+  }
+
+  #about-us .overlay {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000ab;
+    width: 100%;
+    height: 100%;
   }
 
   #about-us .body {
     display: flex;
     gap: 40px;
     width: 100%;
+    padding: 0 120px;
   }
 
   .images-about {
