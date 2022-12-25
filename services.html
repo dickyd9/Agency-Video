@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -21,6 +22,7 @@
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       $(function () {
         // Owl Carousel
@@ -55,31 +57,97 @@
   <body>
     <header>
       <nav id="nav" class="px-40 py-6 w-full flex justify-between">
-        <a href="">Logo</a>
+        <a href=""
+          ><img
+            src="./assets/img/logo-border.png"
+            alt=""
+            style="width: 20px; height: 20px"
+        /></a>
         <div class="nav-menu">
-          <a href="./index.html" class="active">Home</a>
-          <a href="./aboutUs.html" class="active">About Us</a>
+          <a href="./index.html">Home</a>
+          <a href="./aboutUs.html">About Us</a>
           <a href="./services.html" class="active">Services</a>
-          <a href="./contact.html" class="active">Contact</a>
+          <a href="./contact.html">Contact</a>
         </div>
       </nav>
     </header>
 
-    <section id="about-header">
-      <div class="breadcrumb">
-        <div class="">
-          <h1>Our Services</h1>
-        </div>
-        <div class="breadcrumb-part">
-          <h3>#</h3>
-          <h3>/</h3>
-          <h3>Our Services</h3>
+    <section id="services-all">
+      <div class="container">
+        <div class="work">
+          <h1 class="title-work">Our Services</h1>
+          <div class="work-detail">
+            <div class="detail">
+              <h1>Company Profile</h1>
+              <p>
+                Untuk memperkenalkan profil perusahaan, Lembaga, instansi dan
+                organisasi melalui bentuk audio visual dengan tim kami yang
+                merupakan lulusan sarjana di bidang Film, Musik, Dkv, Ilmu
+                Komunikasi.
+              </p>
+            </div>
+            <div class="detail">
+              <h1>Iklan dan Sosialisasi</h1>
+              <p>
+                Wujudkan iklan sesuai imajinasi anda! Dengan kemampuan ilustrasi
+                video dan audio dari kami.
+              </p>
+            </div>
+            <div class="detail">
+              <h1>Project Presentasi Video</h1>
+              <p>
+                Membuat project video dengan alat yang professional, tim yang
+                berpengalaman, untuk menunjang produksi demi menyampaikan
+                rancangan proyek anda.
+              </p>
+            </div>
+            <div class="detail">
+              <h1>TVC, Film, Dokumenter</h1>
+              <p>
+                Dokumentasikan cerita, moment dan penelitian anda dengan
+                kualitas yang baik Bersama tim kami.
+              </p>
+            </div>
+            <div class="detail">
+              <h1>Video Pelatihan</h1>
+              <p>
+                Lakukan pembuatan video pelatihan anda dengan mudah diterima dan
+                nyamandidengar.
+              </p>
+            </div>
+            <div class="detail">
+              <h1>Jingle</h1>
+              <p>
+                lagu singkat yang pada umumnya digunakan untuk iklan sebuah
+                produk yang berguna untuk menarik perhatian penonton.
+              </p>
+            </div>
+            <div class="detail">
+              <h1>Audio Recording</h1>
+              <p>
+                Music scoring adalah sebuah cara agar scene film menjadi lebih
+                dramatis dengan teknik penempatan nada yang cocok.
+              </p>
+            </div>
+            <div class="detail">
+              <h1>Sound Design</h1>
+              <p>
+                Suara dalam film adalah bagian paling penting, karena suara
+                dapat membuat penonton merasakan apa yang terlihat. Melihat
+                dalam film tidak hanya dari mata tetapi juga melalui telinga.
+              </p>
+            </div>
+            <div class="detail">
+              <h1>Audio Post Production</h1>
+              <p>
+                Proses produksi audio yang merupakan hasil layak dengar, dari
+                hasil recording. Secara proses dengan Editing, Mixing dan
+                Mastering untuk Tvc, Short Movie dan Film.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-
-    <section id="services-all">
-      <div class="container"></div>
     </section>
 
     <footer>
@@ -102,6 +170,10 @@
         </a>
       </div>
     </footer>
+
+    <div class="copyright">
+      <span>Copyright @2022 LIMAEMPAT PRODUCTION </span>
+    </div>
 
     <div class="fixed bottom-0 right-0 m-10">
       <button
@@ -143,6 +215,7 @@
           mybutton.style.display = "none";
         }
       };
+      AOS.init();
     </script>
   </body>
 </html>

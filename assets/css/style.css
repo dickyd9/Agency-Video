@@ -6,6 +6,8 @@
   --black: rgb(29, 29, 29);
 
   --container-desktop: 128px;
+
+  --font-header: "Fjalla One";
 }
 
 #preloader {
@@ -81,8 +83,15 @@
 }
 
 html {
-  font-family: "Fjalla One";
   scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: var(--font-header);
+}
+
+p {
+  color: #adadad;
 }
 
 body {
@@ -102,6 +111,7 @@ footer h1 {
   color: white;
   font-size: 2rem;
   text-align: center;
+  font-family: var(--font-header);
 }
 
 footer .social-media {
@@ -653,24 +663,6 @@ footer .body-footer p {
     content: "";
   }
 
-  /* Services Section */
-  #services-all {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding-bottom: 60px;
-    padding-top: 110px;
-    background-size: cover;
-  }
-
-  #services-all .container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 60px 80px;
-  }
-
   #team {
     width: 100%;
     background-size: cover;
@@ -681,7 +673,7 @@ footer .body-footer p {
     background-color: #00000052;
     display: grid;
     gap: 25px;
-    
+
     padding: 25px 120px;
   }
   #team .overlay .the-team {
@@ -746,6 +738,132 @@ footer .body-footer p {
     padding-bottom: 12px;
     font-size: 1rem;
     color: rgb(172, 172, 172);
+  }
+
+  /* Services Section */
+  #services-all {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-size: cover;
+    background-image: url(../img/bg/bg-3.jpg);
+  }
+
+  #services-all .container {
+    width: 100%;
+    height: 100%;
+    background-color: #000000c7;
+  }
+
+  #services-all .work {
+    display: grid;
+    padding: 80px 120px;
+  }
+
+  #services-all .work .title-work {
+    font-family: var(--font-header);
+    font-size: 4rem;
+    font-size: 600;
+    color: #fff;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  #services-all .work .title-work::after {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 70px;
+    background: var(--main);
+    content: "";
+  }
+
+  #services-all .work .work-detail {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #services-all .work .work-detail .detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    display: inline;
+    max-width: 25rem;
+    padding: 15px 0;
+  }
+
+  #services-all .work .work-detail .detail h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    color: #ffffff;
+    position: relative;
+  }
+
+  #services-all .work .work-detail .detail h1::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 70px;
+    background: var(--main);
+    content: "";
+  }
+
+  #services-all .work .work-detail .detail p {
+    padding-bottom: 25px;
+  }
+
+  #services-all .work .detail p {
+    font-size: 16px;
+    color: #adadad;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 0 15px 0;
+  }
+
+  /* Contact Us */
+  #contact-us {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-image: url(../img//bg/bg-2.jpg);
+  }
+
+  #contact-us .overlay {
+    justify-content: center;
+    background-color: #000000c2;
+    width: 100%;
+    height: 100%;
+    padding: 80px 120px;
+  }
+  #contact-us .overlay h1 {
+    font-family: var(--font-header);
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    color: #ffffff;
+    position: relative;
+  }
+
+  #contact-us .overlay h1::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 70px;
+    background: var(--main);
+    content: "";
+  }
+
+  .body-contact {
+    display: grid;
   }
 }
 
