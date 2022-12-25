@@ -670,6 +670,83 @@ footer .body-footer p {
     height: 100%;
     padding: 60px 80px;
   }
+
+  #team {
+    width: 100%;
+    background-size: cover;
+    background-image: url(../img/bg/bg-2.jpg);
+  }
+
+  #team .overlay {
+    background-color: #00000052;
+    display: grid;
+    gap: 25px;
+    
+    padding: 25px 120px;
+  }
+  #team .overlay .the-team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  #team .overlay .title {
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    padding: 40px 0;
+  }
+
+  #team .card-team {
+    width: max-content;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+    background: #fff;
+  }
+
+  #team .card-team .images-team {
+    position: relative;
+  }
+
+  .card-team .images-team img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .info-team {
+    display: grid;
+    justify-content: center;
+    padding: 12px;
+    background-color: #222222;
+  }
+
+  .info-team .social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 12px;
+  }
+
+  .info-team .social img {
+    width: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .info-team h1 {
+    display: inline;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--main);
+  }
+
+  .info-team span {
+    text-align: center;
+    padding-bottom: 12px;
+    font-size: 1rem;
+    color: rgb(172, 172, 172);
+  }
 }
 
 @media (max-width: 768px) {
