@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -21,6 +22,7 @@
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       $(function () {
         // Owl Carousel
@@ -57,48 +59,61 @@
       <nav id="nav" class="px-40 py-6 w-full flex justify-between">
         <a href="">Logo</a>
         <div class="nav-menu">
-          <a href="./index.html" class="active">Home</a>
+          <a href="./index.html">Home</a>
           <a href="./aboutUs.html" class="active">About Us</a>
-          <a href="./services.html" class="active">Services</a>
-          <a href="./contact.html" class="active">Contact</a>
+          <a href="./services.html">Services</a>
+          <a href="./contact.html">Contact</a>
         </div>
       </nav>
     </header>
 
     <section id="about-header">
-      <div class="breadcrumb">
-        <div class="">
-          <h1>About Us</h1>
-        </div>
-        <div class="breadcrumb-part">
-          <h3>#</h3>
-          <h3>/</h3>
-          <h3>About Us</h3>
+      <div class="overlay">
+        <div
+          class="breadcrumb"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0"
+        >
+          <div class="">
+            <h1>About Us</h1>
+          </div>
+          <div class="breadcrumb-part">
+            <h3>#</h3>
+            <h3>/</h3>
+            <h3>About Us</h3>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="about-us">
-      <div class="body">
-        <div class="images-about">
-          <img
-            src="https://images.unsplash.com/photo-1439209306665-700c9bca794c?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="
-            alt=""
-          />
-        </div>
-        <div class="title-about">
-          <h1>About Us</h1>
+      <div class="overlay">
+        <div
+          class="body"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0"
+        >
+          <div class="images-about">
+            <img src="./assets/img/bg/workdesk.jpeg" alt="" />
+          </div>
+          <div class="title-about">
+            <h1>About Us</h1>
 
-          <p>
-            Limaempat studio di dirikan tahun 2018, studio bergerak di bidang
-            Audio Visual Production untuk menunjang kebutuhan industri musik,
-            periklanan, film, dan musik video.
-          </p>
-          <p>
-            Kami memiliki layanan audio recording, music scoring, pembuatan
-            Jingle, Sound Design, Audio Post Production, Recoding, TVC, Iklan
-            Digital, Motion Graphics
-          </p>
+            <p>
+              Limaempat studio di dirikan tahun 2018, studio bergerak di bidang
+              Audio Visual Production untuk menunjang kebutuhan industri musik,
+              periklanan, film, dan musik video.
+            </p>
+            <p>
+              Kami memiliki layanan audio recording, music scoring, pembuatan
+              Jingle, Sound Design, Audio Post Production, Recoding, TVC, Iklan
+              Digital, Motion Graphics
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -166,6 +181,10 @@
       </div>
     </footer>
 
+    <div class="copyright">
+      <span>Copyright @2022 LIMAEMPAT PRODUCTION </span>
+    </div>
+
     <div class="fixed bottom-0 right-0 m-10">
       <button
         onclick="topFunction()"
@@ -206,6 +225,7 @@
           mybutton.style.display = "none";
         }
       };
+      AOS.init();
     </script>
   </body>
 </html>
