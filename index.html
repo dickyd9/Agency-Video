@@ -56,13 +56,21 @@
 
   <body>
     <header>
-      <nav id="nav" class="px-40 py-6 w-full flex justify-between">
-        <a href=""
-          ><img
-            src="./assets/img/logo-border.png"
-            alt=""
-            style="width: 20px; height: 20px"
-        /></a>
+      <nav id="nav">
+        <div class="top-nav">
+          <a class="logo" href=""
+            ><img src="./assets/img/logo-border.png" alt=""
+          /></a>
+
+          <a href="" class="close-btn">
+            <label for="check">
+              <input type="checkbox" id="check" />
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </a>
+        </div>
         <div class="nav-menu">
           <a href="#" class="active">Home</a>
           <a href="./aboutUs.html">About Us</a>
@@ -81,7 +89,7 @@
         data-aos-offset="0"
       >
         <h1 class="font-bold">LIMAEMPAT PRODUCTION</h1>
-        <div class="button-explore mt-10">
+        <div class="button-explore mt-6">
           <a href="#aboutUs">Explore</a>
         </div>
       </div>
@@ -106,8 +114,8 @@
               professional to make a custom video for your business and, once
               the project is over.
             </p>
-            <div class="w-max">
-              <div class="button-explore mt-10">
+            <div class="buttonE">
+              <div class="button-explore">
                 <a href="#aboutUs">View All Services</a>
               </div>
             </div>
@@ -170,7 +178,7 @@
           <button
             class="play-button"
             type="button"
-            class="btn btn-primary video-btn"
+            class="video-btn"
             data-toggle="modal"
             data-src="https://www.youtube.com/embed/NFWSFbqL0A0"
             data-target="#myModal"
@@ -299,51 +307,6 @@
       </div>
     </section>
 
-    <!-- <section id="OurClient">
-      <h1 class="text-center">Our Client</h1>
-
-      <div class="flex justify-between w-full">
-        <div class="h-56 w-56">
-          <img src="assets/img/pertamina.png" alt="" />
-        </div>
-        <div class="h-56 w-56">
-          <img src="assets/img/pertamina.png" alt="" />
-        </div>
-        <div class="h-56 w-56">
-          <img src="assets/img/pertamina.png" alt="" />
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h1 class="text-center">Contact Us</h1>
-      <div class="flex gap-10">
-        <form action="" class="grid gap-6 my-10">
-          <input type="text" placeholder="Email" />
-          <textarea
-            name=""
-            placeholder="Message"
-            id=""
-            cols="30"
-            rows="10"
-          ></textarea>
-          <button class="submit-btn">Send</button>
-        </form>
-
-        <div class="contact-info-card">
-          <div class="contact-info">Contact Info</div>
-          <div class="flex gap-2">
-            <div class="text-white">Email :</div>
-            <div class="text-white">Email@gmail.com</div>
-          </div>
-          <div class="flex gap-2">
-            <div class="text-white">Whatsapp :</div>
-            <div class="text-white">08515552221</div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <footer>
       <h1>LIMAEMPAT PRODUCTION</h1>
       <div class="body-footer">
@@ -394,7 +357,7 @@
     </div>
 
     <!-- Modal -->
-    <!-- <div
+    <div
       class="modal fade"
       id="myModal"
       tabindex="-1"
@@ -426,7 +389,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <script text="js">
       var myNav = document.getElementById("nav");
@@ -434,17 +397,46 @@
 
       window.onscroll = function () {
         "use strict";
-        if (
-          document.body.scrollTop >= 60 ||
-          document.documentElement.scrollTop >= 60
-        ) {
-          myNav.classList.add("scroll");
-          mybutton.style.display = "block";
-        } else {
-          myNav.classList.remove("scroll");
-          mybutton.style.display = "none";
+        if (window.matchMedia("only screen and (max-width: 768px)")) {
+          if (
+            document.body.scrollTop >= 60 ||
+            document.documentElement.scrollTop >= 60
+          ) {
+            myNav.classList.add("scroll");
+            mybutton.style.display = "block";
+          } else {
+            myNav.classList.remove("scroll");
+            mybutton.style.display = "none";
+          }
         }
       };
+
+      $(document).ready(function () {
+        // Gets the video src from the data-src on each button
+
+        var $videoSrc;
+        $(".video-btn").click(function () {
+          $videoSrc = $(this).data("src");
+        });
+        console.log($videoSrc);
+
+        // when the modal is opened autoplay it
+        $("#myModal").on("shown.bs.modal", function (e) {
+          // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+          $("#video").attr(
+            "src",
+            $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
+          );
+        });
+
+        // stop playing the youtube video when I close the modal
+        $("#myModal").on("hide.bs.modal", function (e) {
+          // a poor man's stop video
+          $("#video").attr("src", $videoSrc);
+        });
+
+        // document ready
+      });
 
       AOS.init();
     </script>
