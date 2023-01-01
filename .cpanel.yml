@@ -1,4 +1,5 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=//home/limx5643/public_html/limaempatproduction.com
-    - /usr/bin/rsync -Paz * $DEPLOYPATH --delete
+    - export DEPLOYPATH=//home/limx5643/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
