@@ -6,3 +6,4 @@ deployment:
     - /bin/cp contact.html $DEPLOYPATH
     - /bin/cp services.html $DEPLOYPATH
     - /bin/cp assets $DEPLOYPATH
+    - /bin/cp .cpanel.yml $DEPLOYPATH
