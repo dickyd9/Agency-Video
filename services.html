@@ -56,20 +56,29 @@
 
   <body>
     <header>
-      <nav id="nav" class="px-40 py-6 w-full flex justify-between">
-        <a href=""
-          ><img
-            src="./assets/img/logo-border.png"
-            alt=""
-            style="width: 20px; height: 20px"
-        /></a>
-        <div class="nav-menu">
-          <a href="./index.html">Home</a>
-          <a href="./aboutUs.html">About Us</a>
-          <a href="./services.html" class="active">Services</a>
-          <a href="./contact.html">Contact</a>
-        </div>
-      </nav>
+      <div class="wrapper">
+        <nav id="nav" class="top-nav">
+          <div class="container-flex">
+            <div class="brand">
+              <a href="">
+                <img src="./assets/img/logo-border.png" alt="" />
+              </a>
+            </div>
+            <div class="burger">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            <div class="bg-sidebar"></div>
+            <ul class="sidebar" id="nav-menu">
+              <li id="index.html"><a href="index.html"> Home</a></li>
+              <li id="abt"><a href="aboutUs.html">About Us</a></li>
+              <li id="srrv"><a href="services.html">Service</a></li>
+              <li id="ct"><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <section id="services-all">
@@ -216,6 +225,34 @@
         }
       };
       AOS.init();
+    </script>
+    <script>
+      const burger = document.querySelector(".burger");
+      const sidebar = document.querySelector(".sidebar");
+      const bgSidebar = document.querySelector(".bg-sidebar");
+
+      burger.addEventListener("click", function () {
+        this.classList.toggle("change");
+        sidebar.classList.toggle("change");
+        bgSidebar.classList.toggle("change");
+      });
+
+      bgSidebar.addEventListener("click", function () {
+        this.classList.remove("change");
+        sidebar.classList.remove("change");
+        burger.classList.remove("change");
+      });
+
+      $(function () {
+        var current = location.pathname;
+        $("#nav-menu li a").each(function () {
+          var $this = $(this);
+          // if the current path is like this link, make it active
+          if ($this.attr("href").indexOf(current) !== -1) {
+            $this.addClass("active");
+          }
+        });
+      });
     </script>
   </body>
 </html>
