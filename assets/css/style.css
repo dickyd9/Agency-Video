@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 
 :root {
   --main: rgb(223, 179, 96);
@@ -9,9 +10,14 @@
   --container-desktop: 128px;
 
   --font-header: "Fjalla One";
+  --font-header-size: 2rem;
+
+  --font-body: "Merriweather Sans", sans-serif;
+  --font-body-size: 0.8rem;
 }
 
 #preloader {
+  z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
@@ -28,7 +34,7 @@
   margin: -75px 0 0 -75px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #9370db;
+  border-top-color: #d3d1d8;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
@@ -41,7 +47,7 @@
   bottom: 5px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #ba55d3;
+  border-top-color: #2b2b2b;
   -webkit-animation: spin 3s linear infinite;
   animation: spin 3s linear infinite;
 }
@@ -54,7 +60,7 @@
   bottom: 15px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #ff00ff;
+  border-top-color: #000000;
   -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
 }
@@ -89,10 +95,21 @@ html {
 
 h1 {
   font-family: var(--font-header);
+  letter-spacing: 6px;
 }
 
 p {
+  font-family: var(--font-body);
   color: var(--grey);
+}
+
+span {
+  font-family: var(--font-body);
+  color: var(--grey);
+}
+
+a {
+  text-decoration: none !important;
 }
 
 body {
@@ -131,24 +148,6 @@ body {
   transform: scale(1.5);
 }
 
-.breadcrumb {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  gap: 8px;
-  color: #ffffff;
-}
-
-.breadcrumb .breadcrumb-part {
-  display: flex;
-  gap: 8px;
-}
-
-.breadcrumb h1 {
-  font-size: 3rem;
-  font-weight: 600;
-}
-
 @media (min-width: 1025px) {
   header {
     position: fixed;
@@ -165,7 +164,8 @@ body {
 
   footer h1 {
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
     text-align: center;
     font-family: var(--font-header);
   }
@@ -189,7 +189,7 @@ body {
 
   footer .body-footer p {
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     color: #adadad;
     font-weight: 400;
     line-height: 26px;
@@ -253,23 +253,28 @@ body {
   }
 
   .button-explore a {
+    font-family: var(--font-header);
     padding: 0.7em 2em;
     font-size: 16px;
     background: #222222;
     color: #fff;
     border: none;
     cursor: pointer;
-    font-family: inherit;
+  }
+
+  .button-explore a:hover {
+    color: #fff;
+    font-weight: 600;
   }
 
   .modal-dialog {
-    max-width: 800px;
-    margin: 30px auto;
+    max-width: 1024px !important;
+    margin: 30px auto !important;
   }
 
   .modal-body {
-    position: relative;
-    padding: 0px;
+    position: relative !important;
+    padding: 0px !important;
   }
   .close {
     position: absolute;
@@ -283,6 +288,10 @@ body {
   }
 
   #nav {
+    font-family: var(--font-header);
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-stretch: expanded;
     display: flex;
     justify-content: space-between;
     padding: 20px var(--container-desktop);
@@ -298,12 +307,14 @@ body {
   .nav-menu a {
     opacity: 100%;
     color: var(--main);
+    font-size: 1.5rem;
     font-weight: 600;
     font-stretch: extra-condensed;
   }
 
   .nav-menu a:hover {
     color: var(--main);
+    font-weight: 700;
   }
 
   .nav-menu .active {
@@ -324,6 +335,7 @@ body {
     width: 30px;
   }
 
+  /* Hero */
   .hero {
     display: flex;
     width: 100%;
@@ -343,11 +355,14 @@ body {
     background-color: rgba(0, 0, 0, 0.722);
   }
 
-  .hero h1 {
+  .hero .title {
+    font-family: var(--font-header);
     font-size: 6rem;
+    font-weight: 700;
     color: #ffffff;
   }
 
+  /* Home Service */
   #services {
     display: flex;
     justify-content: center;
@@ -356,13 +371,16 @@ body {
     background-image: url(../img/bg/workdesk.jpeg);
   }
 
+  #services .container-services {
+    margin: 0 120px;
+  }
+
   #services .overlay {
     display: flex;
-    background-color: #222222cf;
+    background-color: #222222dc;
     width: 100%;
     padding-bottom: 60px;
     padding-top: 110px;
-    
     padding: 120px 0;
   }
 
@@ -382,18 +400,20 @@ body {
   }
 
   #services .services-title .title span {
+    font-family: var(--font-header);
     position: relative;
-    font-size: 1.5rem;
-    font-weight: 500;
-    padding-bottom: 50px;
+    font-size: 1.8rem;
+    font-weight: 600;
     color: #ffffff;
   }
 
   #services .services-title .title h1 {
+    font-family: var(--font-header);
     position: relative;
     font-size: 3rem;
-    font-weight: 500;
+    font-weight: 600;
     padding-bottom: 25px;
+    margin-top: 10px;
     color: #ffffff;
   }
 
@@ -411,20 +431,37 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
   }
 
   #services .card-services {
-    max-width: 22rem;
+    max-width: 40rem;
   }
 
-  #services .container .services-detail .card-services h1 {
-    font-size: 2rem;
-    font-weight: 500;
+  #services .card-services p {
+    font-size: 1.2rem;
+  }
+
+  #services .services-detail .card-services h1 {
+    font-family: var(--font-header);
+    position: relative;
+    font-size: 3rem;
+    font-weight: 600;
     padding-bottom: 12px;
     color: #ffffff;
   }
 
+  #services .services-detail .card-services h1::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 70px;
+    background: var(--main);
+    content: "";
+  }
+
+  /* Portfolio */
   #portfolio {
     width: 100%;
   }
@@ -514,6 +551,21 @@ body {
     position: relative;
   }
 
+  .wrapper-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+  }
+
+  .wrapper-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* our client */
   /* fix blank or flashing items on carousel */
   .owl-carousel .item {
     position: relative;
@@ -961,7 +1013,7 @@ body {
     width: 30px;
     height: 30px;
     background: transparent;
-    top: -15px;
+    top: -10px;
     left: -7px;
     z-index: -5;
     border-top: 3px solid var(--color);
@@ -975,7 +1027,7 @@ body {
     width: 30px;
     height: 30px;
     background: transparent;
-    bottom: -16px;
+    bottom: -10px;
     right: -7px;
     z-index: -5;
     border-right: 3px solid var(--color);
@@ -994,38 +1046,49 @@ body {
   }
 
   .button-explore a {
+    text-decoration: none;
     padding: 0.4em 1em;
     font-size: 16px;
     background: #222222;
     color: #fff;
     border: none;
     cursor: pointer;
-    font-family: inherit;
+    font-family: var(--font-header);
+  }
+
+  .button-explore a:hover {
+    color: #fff !important;
   }
 
   #nav {
     position: fixed;
-    display: none;
+    display: block;
     z-index: 50;
     padding: 20px;
-    height: 15%;
     width: 100%;
+    height: auto;
     background-color: var(--black);
+  }
+  .collapse {
+    visibility: hidden;
   }
 
   .top-nav {
     display: flex;
-    margin-bottom: 25px;
+    margin-bottom: 12px;
     justify-content: space-between;
   }
 
   .top-nav .logo img {
-    width: 50px;
-    height: 50px;
+    display: grid;
+    align-items: center;
+    width: 30px;
+    height: 30px;
   }
 
   .nav-menu {
-    display: none;
+    display: grid;
+    z-index: 10000;
     gap: 20px;
     justify-content: center;
     justify-items: center;
@@ -1049,52 +1112,85 @@ body {
     content: "";
   }
 
-  label {
-    display: flex;
-    flex-direction: column;
-    width: 70px;
+  .close-btn {
+    display: block;
+  }
+
+  .animated-icon2 {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
     cursor: pointer;
   }
 
-  label span {
-    background: #fff;
-    border-radius: 10px;
-    height: 7px;
-    margin: 7px 0;
-    transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  }
-
-  span:nth-of-type(1) {
-    width: 50%;
-  }
-
-  span:nth-of-type(2) {
+  .animated-icon2 span {
+    display: block;
+    position: absolute;
+    height: 3px;
     width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+    background: #e3f2fd;
   }
 
-  span:nth-of-type(3) {
-    width: 75%;
+  .animated-icon2.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
 
-  input[type="checkbox"] {
-    display: none;
+  .animated-icon2.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
 
-  input[type="checkbox"]:checked ~ span:nth-of-type(1) {
-    transform-origin: bottom;
-    transform: rotatez(45deg) translate(8px, 0px);
+  .animated-icon2.open span:nth-child(4) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
   }
 
-  input[type="checkbox"]:checked ~ span:nth-of-type(2) {
-    transform-origin: top;
-    transform: rotatez(-45deg);
+  .animated-icon2 span:nth-child(1) {
+    top: 0px;
   }
 
-  input[type="checkbox"]:checked ~ span:nth-of-type(3) {
-    transform-origin: bottom;
-    width: 50%;
-    transform: translate(30px, -11px) rotatez(45deg);
+  .animated-icon2 span:nth-child(2),
+  .animated-icon2 span:nth-child(3) {
+    top: 10px;
   }
+
+  .animated-icon2 span:nth-child(4) {
+    top: 20px;
+  }
+
+  .animated-icon2.open span:nth-child(1) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+  }
+
+  /* Hero */
 
   .hero {
     display: flex;
@@ -1116,8 +1212,11 @@ body {
   }
 
   .hero h1 {
+    font-family: var(--font-header);
     font-size: 2rem;
+    font-weight: 600;
     color: #ffffff;
+    padding-bottom: 12px;
   }
 
   #services {
