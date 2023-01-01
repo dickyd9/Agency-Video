@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/websites/tutorial.websitesaya.net
+    - export DEPLOYPATH=//home/limx5643/public_html/limaempatproduction.com
     - /usr/bin/rsync -Paz * $DEPLOYPATH --delete
