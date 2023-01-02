@@ -161,7 +161,7 @@ body {
 .bar3 {
   width: 35px;
   height: 5px;
-  background-color: #333;
+  background-color: white;
   margin: 6px 0;
   transition: 0.4s;
   border-radius: 5px;
@@ -522,7 +522,12 @@ nav ul li a {
 
   #services .services-title .buttonE {
     width: max-content;
-    padding-top: 20px;
+    padding-top: 40px;
+  }
+
+  #services .services-title p {
+    position: relative;
+    font-size: 1.5rem;
   }
 
   #services .services-title .title span {
@@ -536,10 +541,11 @@ nav ul li a {
   #services .services-title .title h1 {
     font-family: var(--font-header);
     position: relative;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 600;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
     margin-top: 10px;
+    margin-bottom: 15px;
     color: #ffffff;
   }
 
@@ -565,7 +571,7 @@ nav ul li a {
   }
 
   #services .card-services p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   #services .services-detail .card-services h1 {
@@ -574,6 +580,7 @@ nav ul li a {
     font-size: 3rem;
     font-weight: 600;
     padding-bottom: 12px;
+    margin-bottom: 12px;
     color: #ffffff;
   }
 
@@ -594,8 +601,8 @@ nav ul li a {
 
   .grid {
     display: grid;
-    grid-template-rows: repeat(4, 180px);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 280px);
+    grid-template-columns: repeat(3, 4fr);
     grid-gap: 5px;
   }
 
@@ -605,12 +612,12 @@ nav ul li a {
 
   .item .play-button {
     position: absolute;
+    background: #0f0f0f84;
     display: grid;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-image: #222222a0;
   }
 
   .item .play-button img {
@@ -624,27 +631,15 @@ nav ul li a {
   }
 
   .item:nth-child(1) {
-    grid-row: 1 / 4;
+    grid-row: 1 / 2;
   }
 
   .item:nth-child(2) {
-    grid-column: 2 / 4;
-    grid-row: 1 / 3;
+    grid-row: 1 / 2;
   }
 
   .item:nth-child(3) {
-    grid-column: 3 / 4;
-    grid-row: 3 / 5;
-  }
-
-  .item:nth-child(4) {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-  }
-
-  .item:nth-child(5) {
-    grid-column: 1 / 3;
-    grid-row: 4 / 5;
+    grid-row: 1 / 2;
   }
 
   /* styling code */
@@ -846,12 +841,23 @@ nav ul li a {
   }
 
   #about-us .title-about h1 {
+    font-family: var(--font-header);
+    font-size: 6rem;
+    font-weight: 600;
     position: relative;
-    font-size: 3rem;
-    font-weight: 500;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
     margin-bottom: 25px;
     color: #ffffff;
+  }
+
+  #about-us .title-about h1::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 8px;
+    width: 100px;
+    background: var(--main);
+    content: "";
   }
 
   #about-us p {
@@ -860,16 +866,6 @@ nav ul li a {
     font-weight: 400;
     line-height: 26px;
     margin: 0 0 15px 0;
-  }
-
-  #about-us .title-about h1::after {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 5px;
-    width: 70px;
-    background: var(--main);
-    content: "";
   }
 
   #team {
@@ -958,7 +954,7 @@ nav ul li a {
     background-image: url(../img/bg/bg-3.jpg);
   }
 
-  #services-all .container {
+  #services-all .container-services {
     width: 100%;
     height: 100%;
     background-color: #000000c7;
@@ -969,16 +965,17 @@ nav ul li a {
     padding: 80px 120px;
   }
 
-  #services-all .work .title-work {
+  #services-all .work .title h1 {
     font-family: var(--font-header);
-    font-size: 4rem;
-    font-size: 600;
+    font-size: 6rem;
+    font-size: 700 !important;
     color: #fff;
+    padding-bottom: 15px;
     margin-bottom: 3rem;
     position: relative;
   }
 
-  #services-all .work .title-work::after {
+  #services-all .work .title h1::after {
     position: absolute;
     text-align: center;
     left: 0;
@@ -1001,15 +998,16 @@ nav ul li a {
     justify-content: center;
     position: relative;
     display: inline;
-    max-width: 25rem;
+    max-width: 35rem;
     padding: 15px 0;
   }
 
   #services-all .work .work-detail .detail h1 {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 12px;
-    padding-bottom: 12px;
+    font-family: var(--font-header);
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
     color: #ffffff;
     position: relative;
   }
@@ -1054,7 +1052,7 @@ nav ul li a {
   #contact-us .overlay h1 {
     font-family: var(--font-header);
     font-size: 3rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 12px;
     padding-bottom: 12px;
     color: #ffffff;
@@ -1072,7 +1070,13 @@ nav ul li a {
   }
 
   .body-contact {
-    display: grid;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #23232369;
   }
 }
 
@@ -1203,6 +1207,10 @@ nav ul li a {
   }
   .collapse {
     visibility: hidden;
+  }
+
+  .open-nav {
+    position: fixed;
   }
 
   .top-nav {
@@ -1351,58 +1359,63 @@ nav ul li a {
   }
 
   #services {
-    display: grid;
+    display: flex;
     justify-content: center;
     width: 100%;
     background-size: cover;
     background-image: url(../img/bg/workdesk.jpeg);
   }
 
+  #services .container-services {
+    margin: 0 12px;
+  }
+
   #services .overlay {
-    background-color: #222222cf;
+    display: grid;
+    background-color: #222222dc;
     width: 100%;
     padding-bottom: 60px;
-    padding-top: 60px;
+    padding-top: 110px;
+    padding: 120px 0;
   }
 
-  #services .container {
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 6px 20px;
-  }
-
-  #services span {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: #ffffff;
+  #services .services-flex {
+    display: grid;
+    justify-content: space-between;
   }
 
   #services .services-title {
-    display: grid;
-    justify-content: center;
+    max-width: 100%;
+    padding-right: 25px;
   }
 
-  #services .services-title .title {
-    display: grid;
-    justify-content: center;
+  #services .services-title .buttonE {
+    width: max-content;
+    padding: 10px 0 40px 0;
   }
 
-  #services .services-title .title h1 {
+  #services .services-title p {
     position: relative;
-    font-size: 2rem;
-    font-weight: 500;
-    padding-bottom: 25px;
+    font-size: 1.5rem;
+  }
+
+  #services .services-title .title span {
+    font-family: var(--font-header);
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 600;
     color: #ffffff;
   }
 
-  #services p {
-    text-align: center;
-    font-size: 0.8rem;
-    color: #adadad;
-    font-weight: 400;
-    line-height: 26px;
-    margin: 0 0 15px 0;
+  #services .services-title .title h1 {
+    font-family: var(--font-header);
+    position: relative;
+    font-size: 4rem;
+    font-weight: 600;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #ffffff;
   }
 
   #services .services-title .title h1::after {
@@ -1414,38 +1427,50 @@ nav ul li a {
     background: var(--main);
     content: "";
   }
-  #services .container .services-title .title {
-    margin-bottom: 25px;
-  }
 
-  .buttonE {
+  #services .services-detail {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
-    margin: 25px 0;
+    gap: 50px;
   }
 
-  #services .container .services-detail {
-    padding: 25px 0;
+  #services .card-services {
+    max-width: 40rem;
   }
 
-  #services .container .services-detail .card {
-    text-align: center;
+  #services .card-services p {
+    font-size: 1.5rem;
+  }
+
+  #services .services-detail .card-services h1 {
+    font-family: var(--font-header);
     position: relative;
-    display: inline;
-    width: 100%;
-    padding: 25px 0;
-  }
-
-  #services .container .services-detail .card h1 {
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 3rem;
+    font-weight: 600;
     padding-bottom: 12px;
+    margin-bottom: 12px;
     color: #ffffff;
   }
 
-  .services-detail .body p {
-    padding-bottom: 25px;
+  #services .services-detail .card-services h1::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 70px;
+    background: var(--main);
+    content: "";
+  }
+
+  .item .play-button {
+    position: absolute;
+    background: #0f0f0f84;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .item {
@@ -1464,9 +1489,25 @@ nav ul li a {
   }
 
   .item .play-button img {
-    width: 40px;
+    width: 100px;
     opacity: 70%;
   }
+
+  .wrapper-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+  }
+
+  .wrapper-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Client section */
 
   #client {
     width: 100%;
@@ -1525,6 +1566,7 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-top: 40px;
     height: 100vh;
     background-size: cover;
     background-image: url(../img/bg/bg-1.jpg);
@@ -1566,16 +1608,18 @@ nav ul li a {
   }
 
   #about-us .title-about h1 {
+    font-family: var(--font-header);
     position: relative;
-    font-size: 2rem;
-    font-weight: 500;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
     color: #ffffff;
   }
 
   #about-us p {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     color: #adadad;
     font-weight: 400;
     line-height: 26px;
@@ -1592,6 +1636,7 @@ nav ul li a {
     content: "";
   }
 
+  /* Team */
   #team {
     width: 100%;
     background-size: cover;
@@ -1757,15 +1802,18 @@ nav ul li a {
     padding-bottom: 25px;
   }
 
+
+  /* Services */
   #services-all {
     display: flex;
     justify-content: center;
     width: 100%;
+    padding-top: 80px;
     background-size: cover;
     background-image: url(../img/bg/bg-3.jpg);
   }
 
-  #services-all .container {
+  #services-all .container-services {
     width: 100%;
     height: 100%;
     background-color: #000000c7;
@@ -1776,16 +1824,17 @@ nav ul li a {
     padding: 25px;
   }
 
-  #services-all .work .title-work {
+  #services-all .work .title h1 {
     font-family: var(--font-header);
     font-size: 4rem;
     font-size: 600;
     color: #fff;
+    padding-bottom: 15px;
     margin-bottom: 3rem;
     position: relative;
   }
 
-  #services-all .work .title-work::after {
+  #services-all .work h1::after {
     position: absolute;
     text-align: center;
     left: 0;
@@ -1808,13 +1857,13 @@ nav ul li a {
     justify-content: center;
     position: relative;
     display: inline;
-    max-width: 25rem;
     padding: 15px 0;
   }
 
   #services-all .work .work-detail .detail h1 {
+    font-family: var(--font-header);
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 12px;
     padding-bottom: 12px;
     color: #ffffff;
@@ -1832,6 +1881,7 @@ nav ul li a {
   }
 
   #services-all .work .work-detail .detail p {
+    font-size: 1.2rem;
     padding-bottom: 25px;
   }
 

@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
     <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="stylesheet"
@@ -14,69 +21,194 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
     <script
-      src="https://kit.fontawesome.com/a076d05399.js"
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script type="text/javascript" src="./assets/js/owlCarousel.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      $(function () {
-        // Owl Carousel
-        var owl = $(".owl-carousel");
-        owl.owlCarousel({
-          loop: true,
-          margin: 10,
-          nav: false,
-          autoplay: true,
-          autoplayHoverPause: true,
-          responsive: {
-            0: {
-              items: 1,
-            },
-            600: {
-              items: 3,
-            },
-            1000: {
-              items: 5,
-            },
-          },
+    <script type="text/javascript" src="./assets/js/playVid.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".second-button").on("click", function () {
+          $(".animated-icon2").toggleClass("open");
         });
       });
     </script>
-    <title>Video Agency</title>
+
+    <title>Limaempat Production</title>
   </head>
 
-  <!-- <div id="preloader" class="loader">
+  <div id="preloader" class="loader">
     <div id="loader"></div>
-</div> -->
+  </div>
 
   <body>
     <header>
-      <nav id="nav" class="px-40 py-6 w-full flex justify-between">
-        <a href=""
-          ><img
-            src="./assets/img/logo-border.png"
-            alt=""
-            style="width: 20px; height: 20px"
-        /></a>
-        <div class="nav-menu">
-          <a href="./index.html">Home</a>
-          <a href="./aboutUs.html">About Us</a>
-          <a href="./services.html">Services</a>
-          <a href="./contact.html" class="active">Contact</a>
-        </div>
-      </nav>
+      <div class="wrapper">
+        <nav id="nav" class="top-nav">
+          <div class="container-flex">
+            <div class="brand">
+              <a href="">
+                <img src="./assets/img/logo-border.png" alt="" />
+              </a>
+            </div>
+            <div class="burger">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            <div class="bg-sidebar"></div>
+            <ul class="sidebar" id="nav-menu">
+              <li id="index.html"><a href="index.html"> Home</a></li>
+              <li id="abt"><a href="aboutUs.html">About Us</a></li>
+              <li id="srrv"><a href="services.html">Service</a></li>
+              <li id="ct"><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <section id="contact-us">
       <div class="overlay">
         <h1>Contact Us</h1>
         <div class="body-contact">
-
+          <div class="info-wrap bg-primary w-100 p-md-5 p-4">
+            <h3>Let's get in touch</h3>
+            <p class="mb-4">
+              We're open for any suggestion or just to have a chat
+            </p>
+            <div class="dbox w-100 d-flex align-items-start">
+              <div
+                class="icon d-flex align-items-center justify-content-center"
+              >
+                <span class="fa fa-map-marker"></span>
+              </div>
+              <div class="text pl-3">
+                <p>
+                  <span>Address:</span> 198 West 21th Street, Suite 721 New York
+                  NY 10016
+                </p>
+              </div>
+            </div>
+            <div class="dbox w-100 d-flex align-items-center">
+              <div
+                class="icon d-flex align-items-center justify-content-center"
+              >
+                <span class="fa fa-phone"></span>
+              </div>
+              <div class="text pl-3">
+                <p>
+                  <span>Phone:</span>
+                  <a href="tel://1234567920">+ 1235 2355 98</a>
+                </p>
+              </div>
+            </div>
+            <div class="dbox w-100 d-flex align-items-center">
+              <div
+                class="icon d-flex align-items-center justify-content-center"
+              >
+                <span class="fa fa-paper-plane"></span>
+              </div>
+              <div class="text pl-3">
+                <p>
+                  <span>Email:</span>
+                  <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+                </p>
+              </div>
+            </div>
+            <div class="dbox w-100 d-flex align-items-center">
+              <div
+                class="icon d-flex align-items-center justify-content-center"
+              >
+                <span class="fa fa-globe"></span>
+              </div>
+              <div class="text pl-3">
+                <p><span>Website</span> <a href="#">yoursite.com</a></p>
+              </div>
+            </div>
+          </div>
+          <form class="contactform">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="label" for="name">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    id="name"
+                    placeholder="Name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="label" for="email">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="label" for="subject">Subject</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="subject"
+                    id="subject"
+                    placeholder="Subject"
+                  />
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="label" for="#">Message</label>
+                  <textarea
+                    name="message"
+                    class="form-control"
+                    id="message"
+                    cols="30"
+                    rows="4"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="d-flex flex-row-reverse w-full">
+                <div class="button-explore mt-10">
+                  <a href="#services">Send</a>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -90,13 +222,13 @@
         </p>
       </div>
       <div class="social-media">
-        <a href="">
+        <a href="https://www.linkedin.com/company/limaempat-studio/">
           <img src="/assets/img/social-media/instagram.png" alt="" />
         </a>
-        <a href="">
+        <a href="https://www.linkedin.com/company/limaempat-studio/">
           <img src="/assets/img/social-media/linkedin.png" alt="" />
         </a>
-        <a href="">
+        <a href="https://youtube.com/@limaempat3625">
           <img src="/assets/img/social-media/youtube.png" alt="" />
         </a>
       </div>
@@ -129,24 +261,34 @@
       </button>
     </div>
 
-    <script text="js">
-      var myNav = document.getElementById("nav");
-      let mybutton = document.getElementById("myBtn");
+    <script src="./assets/js/main.js"></script>
+    <script>
+      const burger = document.querySelector(".burger");
+      const sidebar = document.querySelector(".sidebar");
+      const bgSidebar = document.querySelector(".bg-sidebar");
 
-      window.onscroll = function () {
-        "use strict";
-        if (
-          document.body.scrollTop >= 60 ||
-          document.documentElement.scrollTop >= 60
-        ) {
-          myNav.classList.add("scroll");
-          mybutton.style.display = "block";
-        } else {
-          myNav.classList.remove("scroll");
-          mybutton.style.display = "none";
-        }
-      };
-      AOS.init();
+      burger.addEventListener("click", function () {
+        this.classList.toggle("change");
+        sidebar.classList.toggle("change");
+        bgSidebar.classList.toggle("change");
+      });
+
+      bgSidebar.addEventListener("click", function () {
+        this.classList.remove("change");
+        sidebar.classList.remove("change");
+        burger.classList.remove("change");
+      });
+
+      $(function () {
+        var current = location.pathname;
+        $("#nav-menu li a").each(function () {
+          var $this = $(this);
+          // if the current path is like this link, make it active
+          if ($this.attr("href").indexOf(current) !== -1) {
+            $this.addClass("active");
+          }
+        });
+      });
     </script>
   </body>
 </html>
