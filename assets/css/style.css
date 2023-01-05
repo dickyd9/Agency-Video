@@ -1073,7 +1073,7 @@ nav ul li a {
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
-    padding: 20px;
+    padding: 50px;
     width: 100%;
     height: 100%;
     background-color: #23232369;
@@ -1087,6 +1087,7 @@ nav ul li a {
   }
 
   .body-contact .info-wrap span {
+    font-family: 'Courier New', Courier, monospace;
     font-size: var(--font-header-size);
     font-weight: 400 !important;
   }
@@ -1943,7 +1944,7 @@ nav ul li a {
     background-color: #000000c2;
     width: 100%;
     height: 100%;
-    padding: 100px 20px ;
+    padding: 100px 200px  ;
   }
   #contact-us .overlay h1 {
     font-family: var(--font-header);
@@ -1969,7 +1970,7 @@ nav ul li a {
     display: grid;
     justify-content: space-between;
     border-radius: 10px;
-    padding: 20px;
+    padding: 40px;
     width: 100%;
     height: 100%;
     background-color: #23232369;
@@ -1977,6 +1978,7 @@ nav ul li a {
 
   .body-contact .info-wrap {
     width: 100%;
+    padding: 40px;
   }
 
   .body-contact .info-wrap span {
