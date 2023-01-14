@@ -1,6 +1,6 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=//home/limx5643/public_html/limaempatproduction.com
+    - export DEPLOYPATH=/home/limx5643/public_html/limaempatproduction.com
     - /bin/cp -R assets $DEPLOYPATH
     - /bin/cp .cpanel.yml $DEPLOYPATH
     - /bin/cp aboutUs.html $DEPLOYPATH
