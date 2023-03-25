@@ -69,6 +69,29 @@
         });
       });
     </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+      function sendEmail() {
+        Email.send({
+          SecureToken: "281dec26-6652-44a3-b720-65da9ddb93fe",
+          Host: "smtp.titan.email",
+          Username: "connect@limaempat.com",
+          Password: "limaempatconnect0100",
+          To: "connect@limaempat.com",
+          From: document.getElementById("email").value,
+          Subject: "Hello there, ",
+          Body:
+            "Nama : " +
+            document.getElementById("name").value +
+            "<br> Email :" +
+            document.getElementById("email").value +
+            "<br> Phone number :" +
+            document.getElementById("phone").value +
+            "<br> Message: " +
+            document.getElementById("message").value,
+        }).then((message) => alert("Message send !"));
+      }
+    </script>
 
     <title>Limaempat Production</title>
   </head>
@@ -171,7 +194,7 @@
                 </svg>
               </div>
               <div class="right">
-                <span class="title">sandika@limaempat.com</span>
+                <span class="title">connect@limaempat.com</span>
 
                 <span class="title">021 3950 2293</span>
 
@@ -183,11 +206,62 @@
                   Kelurahan Tanjung Duren Selatan, Kecamatan Grogol Petamburan
                   Jakarta Barat, DKI Jakarta 11470
                 </span>
+
+                <a
+                  class="download-link"
+                  href="https://lneeoa.dm.files.1drv.com/y4mYEuZOAn5SD5t0Yma0FRpTp01Y6ovzxJNz8ykvcAsdVGggJ207SjLnwa-XsnjDvUenpIbo1Bn0Uvo5tuv4tu63UH3K-YTMnZC0su1hFxdNcDr7x2so81GrzS02XbY4zSG6fF1_EkJefsBxHFzGTWxEm26GiBbpwnN7u9LQ0JjmctqM-Dg0efnCzaP8MKS7TggN1vK0AbhOP1nuxpWV3ve9w"
+                  >Download Company Profile</a
+                >
               </div>
             </div>
           </div>
-          <form class="form-message">
-            <div class=""></div>
+          <form
+            onsubmit="sendEmail(); reset(); return false"
+            class="form-message"
+          >
+            <div class="overlay-form">
+              <h1 class="title">Send us a message</h1>
+              <div class="form-group">
+                <label for="">Nama</label>
+                <input
+                  id="name"
+                  class="input-message"
+                  type="text"
+                  placeholder="Nama"
+                />
+              </div>
+              <div class="form-group">
+                <label for="">No Telpon</label>
+                <input
+                  id="phone"
+                  class="input-message"
+                  type="text"
+                  placeholder="No Telpon"
+                />
+              </div>
+              <div class="form-group">
+                <label for="">Email</label>
+                <input
+                  id="email"
+                  class="input-message"
+                  type="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="">Message</label>
+                <textarea
+                  id="message"
+                  class="input-message"
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <button type="submit" value="sendEmail" class="send-form">Send</button>
+            </div>
           </form>
         </div>
       </div>

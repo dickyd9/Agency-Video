@@ -1082,8 +1082,77 @@ nav ul li a {
   .body-contact .info-wrap {
     width: 60%;
     padding-right: 16px;
-    margin-right: 100px;
     border-right: 2px solid #00000041;
+  }
+
+  .body-contact .form-message {
+    display: flex;
+    width: 50%;
+  }
+
+  .body-contact .form-message .overlay-form {
+    padding: 0 100px;
+    width: 100%;
+  }
+
+  .download-link {
+    font-family: var(--font-header);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    color: var(--main);
+    position: relative;
+  }
+
+  .body-contact .form-message .overlay-form .title {
+    font-family: var(--font-header);
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    color: #ffffff;
+    position: relative;
+  }
+
+  .body-contact .form-message .overlay-form .title::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 70px;
+    background: var(--main);
+    content: "";
+  }
+
+  .body-contact .form-message .overlay-form .form-group input[type=text]  {
+    font-size: 1.5rem;
+  }
+
+  .body-contact .form-message .overlay-form .form-group textarea[type=text]  {
+    font-size: 1.5rem;
+  }
+
+  .body-contact .form-message .overlay-form .send-form {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: var(--main);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 12px;
+  }
+
+  .body-contact .form-message .overlay-form .form-group label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .body-contact .form-message .input-message {
+    width: 100%;
   }
 
   .body-contact .info-wrap span {
