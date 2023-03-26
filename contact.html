@@ -69,8 +69,51 @@
         });
       });
     </script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script type="text/javascript">
+    <script>
+      const constraints = {
+        name: {
+          presence: { allowEmpty: false },
+        },
+        phone: {
+          presence: { allowEmpty: false },
+        },
+        email: {
+          presence: { allowEmpty: false },
+          email: true,
+        },
+        message: {
+          presence: { allowEmpty: false },
+        },
+      };
+
+      const form = document.getElementById("contact-form");
+      form.addEventListener(
+        "submit",
+        function (event) {
+          const formValues = {
+            name: form.elements.name.value,
+            phone: form.elements.phone.value,
+            email: form.elements.email.value,
+            message: form.elements.message.value,
+          };
+
+          const errors = validate(formValues, constraints);
+          if (errors) {
+            event.preventDefault();
+            const errorMessage = Object.values(errors)
+              .map(function (fieldValues) {
+                return fieldValues.join(", ");
+              })
+              .join("\n");
+
+            alert(errorMessage);
+          }
+        },
+        false
+      );
+    </script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <!-- <script type="text/javascript">
       function sendEmail() {
         Email.send({
           SecureToken: "281dec26-6652-44a3-b720-65da9ddb93fe",
@@ -91,7 +134,7 @@
             document.getElementById("message").value,
         }).then((message) => alert("Message send !"));
       }
-    </script>
+    </script> -->
 
     <title>Limaempat Production</title>
   </head>
@@ -215,16 +258,14 @@
               </div>
             </div>
           </div>
-          <form
-            onsubmit="sendEmail(); reset(); return false"
-            class="form-message"
-          >
+          <form action="" class="form-message" method="post" id="contact-form">
             <div class="overlay-form">
               <h1 class="title">Send us a message</h1>
               <div class="form-group">
                 <label for="">Nama</label>
                 <input
                   id="name"
+                  name="name"
                   class="input-message"
                   type="text"
                   placeholder="Nama"
@@ -234,6 +275,7 @@
                 <label for="">No Telpon</label>
                 <input
                   id="phone"
+                  name="phone"
                   class="input-message"
                   type="text"
                   placeholder="No Telpon"
@@ -243,6 +285,7 @@
                 <label for="">Email</label>
                 <input
                   id="email"
+                  name="email"
                   class="input-message"
                   type="email"
                   placeholder="Email"
@@ -253,14 +296,16 @@
                 <textarea
                   id="message"
                   class="input-message"
-                  name=""
+                  name="message"
                   id=""
                   cols="30"
                   rows="10"
                   placeholder="Message"
                 ></textarea>
               </div>
-              <button type="submit" value="sendEmail" class="send-form">Send</button>
+              <button type="submit" value="sendEmail" class="send-form">
+                Send
+              </button>
             </div>
           </form>
         </div>
