@@ -19,7 +19,7 @@ submit.addEventListener("submit", (e) => {
   Email.send({
     SecureToken: "4bff15fd-f160-4086-90b6-dfc1e7d19f68",
     To: "connect@limaempat.com",
-    From: "connect@limaempat.com",
+    From: email.value,
     Subject: "Enquiry Client-" + email.value,
     Body: ebody,
   }).then((message) => alert(message));
