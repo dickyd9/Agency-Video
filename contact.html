@@ -69,72 +69,6 @@
         });
       });
     </script>
-    <script>
-      const constraints = {
-        name: {
-          presence: { allowEmpty: false },
-        },
-        phone: {
-          presence: { allowEmpty: false },
-        },
-        email: {
-          presence: { allowEmpty: false },
-          email: true,
-        },
-        message: {
-          presence: { allowEmpty: false },
-        },
-      };
-
-      const form = document.getElementById("contact-form");
-      form.addEventListener(
-        "submit",
-        function (event) {
-          const formValues = {
-            name: form.elements.name.value,
-            phone: form.elements.phone.value,
-            email: form.elements.email.value,
-            message: form.elements.message.value,
-          };
-
-          const errors = validate(formValues, constraints);
-          if (errors) {
-            event.preventDefault();
-            const errorMessage = Object.values(errors)
-              .map(function (fieldValues) {
-                return fieldValues.join(", ");
-              })
-              .join("\n");
-
-            alert(errorMessage);
-          }
-        },
-        false
-      );
-    </script>
-    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
-    <!-- <script type="text/javascript">
-      function sendEmail() {
-        Email.send({
-          SecureToken: "281dec26-6652-44a3-b720-65da9ddb93fe",
-          Host: "smtp.titan.email",
-          Username: "connect@limaempat.com",
-          Password: "-",
-          To: "connect@limaempat.com",
-          From: document.getElementById("email").value,
-          Subject: "Hello there, ",
-          Body:
-            "Nama : " +
-            document.getElementById("name").value +
-            "<br> Email :" +
-            document.getElementById("email").value +
-            "<br> Phone number :" +
-            document.getElementById("phone").value +
-            "<br> Message: " +
-            document.getElementById("message").value,
-        }).then((message) => alert("Message send !"));
-      }
-    </script> -->
 
     <title>Limaempat Production</title>
   </head>
@@ -308,6 +242,7 @@
               </button>
             </div>
           </form>
+          <script src="./assets/js/enquiry.js"></script>
         </div>
       </div>
     </section>
