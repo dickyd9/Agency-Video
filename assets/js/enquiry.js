@@ -22,5 +22,5 @@ submit.addEventListener("submit", (e) => {
     From: `connect@limaempat.com`,
     Subject: "Enquiry Client-" + email.value,
     Body: ebody,
-  }).then((message) => alert(message));
+  }).then((message) => alert('Thanks for your Enquiry!'));
 });
