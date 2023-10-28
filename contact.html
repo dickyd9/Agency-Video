@@ -113,6 +113,12 @@
               <li id="abt"><a href="aboutUs.html">About Us</a></li>
               <li id="srrv"><a href="services.html">Service</a></li>
               <li id="ct"><a href="contact.html">Contact</a></li>
+              <li>
+                <select id="change-language">
+                  <option value="id" selected="selected">Indonesia</option>
+                  <option value="en">English</option>
+                </select>
+              </li>
             </ul>
           </div>
         </nav>
@@ -253,9 +259,13 @@
     <footer>
       <h1>LIMAEMPAT PRODUCTION</h1>
       <div class="body-footer">
-        <p>
+        <p data-lang="id">
           Limaempat Production memberikan solusi untuk para perusahaan agar
           lebih efisien untuk penyebaran informasi yang sangatlah luas.
+        </p>
+        <p data-lang="en">
+          Limaempat Production provides solutions for companies to effectively
+          disseminate information widely.
         </p>
       </div>
       <div class="social-media">
@@ -325,5 +335,9 @@
         })
       })
     </script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/i18n-language@1.0.8/i18n-language.min.js"></script>
   </body>
 </html>

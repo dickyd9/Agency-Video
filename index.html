@@ -6,52 +6,44 @@
       name="keywords"
       content="audio recording, music scoring, pembuatan
               Jingle, Sound Design, Audio Post Production, Recoding, TVC, Iklan
-              Digital, Motion Graphics"
-    />
+              Digital, Motion Graphics" />
     <meta name="author" content="Limaempat Production" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       http-equiv="Cache-Control"
-      content="no-cache, no-store, must-revalidate"
-    />
+      content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 
     <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    />
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
 
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
@@ -61,9 +53,9 @@
     <script type="text/javascript">
       $(document).ready(function () {
         $(".second-button").on("click", function () {
-          $(".animated-icon2").toggleClass("open");
-        });
-      });
+          $(".animated-icon2").toggleClass("open")
+        })
+      })
     </script>
     <!-- Google Tag Manager -->
     <script>
@@ -117,6 +109,12 @@
               <li id="abt"><a href="aboutUs.html">About Us</a></li>
               <li id="srrv"><a href="services.html">Service</a></li>
               <li id="ct"><a href="contact.html">Contact</a></li>
+              <li>
+                <select id="change-language">
+                  <option value="id" selected="selected">Indonesia</option>
+                  <option value="en">English</option>
+                </select>
+              </li>
             </ul>
           </div>
         </nav>
@@ -129,8 +127,7 @@
         data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"
         data-aos-delay="300"
-        data-aos-offset="0"
-      >
+        data-aos-offset="0">
         <h1 class="title">LIMAEMPAT PRODUCTION</h1>
         <div class="button-explore mt-10">
           <a href="#services">Explore</a>
@@ -145,28 +142,37 @@
           data-aos="fade-zoom-in"
           data-aos-easing="ease-in-back"
           data-aos-delay="300"
-          data-aos-offset="0"
-        >
+          data-aos-offset="0">
           <div class="services-flex">
             <div class="services-title">
-              <div class="title">
+              <div data-lang="id" class="title">
+                <span>Jasa Kami</span>
+                <h1>Apa yang kami kerjakan ?</h1>
+              </div>
+              <div data-lang="en" class="title">
                 <span>Our Services</span>
                 <h1>What we do ?</h1>
               </div>
-              <p>
+              <p data-lang="id">
+                Jika Anda menyewa seorang videografer dari tim kami, Anda akan
+                mendapatkan seorang profesional video untuk membuat video khusus
+                untuk bisnis Anda hingga proyek selesai.
+              </p>
+              <p data-lang="en">
                 If you hire a videographer of our team you will get a video
                 professional to make a custom video for your business and, once
                 the project is over.
               </p>
               <div class="buttonE">
                 <div class="button-explore">
-                  <a href="services.html">View All Services</a>
+                  <a data-lang="id" href="services.html">Lihat Semua</a>
+                  <a data-lang="en" href="services.html">View All Services</a>
                 </div>
               </div>
             </div>
 
             <div class="services-detail">
-              <div class="card-services">
+              <div data-lang="id" class="card-services">
                 <h1>Company Profile</h1>
                 <div class="body">
                   <p>
@@ -177,7 +183,19 @@
                   </p>
                 </div>
               </div>
-              <div class="card-services">
+              <div data-lang="en" class="card-services">
+                <h1>Company Profile</h1>
+                <div class="body">
+                  <p>
+                    To introduce the profiles of companies, institutions,
+                    agencies, and organizations through audio-visual form with
+                    our team, who are graduates in the fields of Film, Music,
+                    Dkv, and Communication Science.
+                  </p>
+                </div>
+              </div>
+
+              <div data-lang="id" class="card-services">
                 <h1>Jingle</h1>
                 <div class="body">
                   <p>
@@ -186,7 +204,17 @@
                   </p>
                 </div>
               </div>
-              <div class="card-services">
+              <div data-lang="en" class="card-services">
+                <h1>Jingle</h1>
+                <div class="body">
+                  <p>
+                    Short songs generally used to advertise a product are useful
+                    for attracting the audience's attention.
+                  </p>
+                </div>
+              </div>
+
+              <div data-lang="id" class="card-services">
                 <h1>Sound Design</h1>
                 <div class="body">
                   <p>
@@ -197,12 +225,32 @@
                   </p>
                 </div>
               </div>
-              <div class="card-services">
+              <div data-lang="en" class="card-services">
+                <h1>Sound Design</h1>
+                <div class="body">
+                  <p>
+                    Sound in a film is the most important part because sound can
+                    make the audience feel what is seen. Seeing in films is not
+                    only through the eyes but also through the ears.
+                  </p>
+                </div>
+              </div>
+
+              <div data-lang="id" class="card-services">
                 <h1>Audio Recording</h1>
                 <div class="body">
                   <p>
                     Music scoring adalah sebuah cara agar scene film menjadi
                     lebih dramatis dengan teknik penempatan nada yang cocok.
+                  </p>
+                </div>
+              </div>
+              <div data-lang="en" class="card-services">
+                <h1>Audio Recording</h1>
+                <div class="body">
+                  <p>
+                    Music scoring is a way to make film scenes more dramatic
+                    with appropriate note placement techniques.
                   </p>
                 </div>
               </div>
@@ -219,15 +267,13 @@
           class="item"
           style="
             background-image: url(https://img.youtube.com/vi/_DkJKoqKOgA/maxresdefault.jpg);
-          "
-        >
+          ">
           <button
             type="button"
             class="video-btn play-button"
             data-toggle="modal"
             data-src="https://www.youtube.com/embed/_DkJKoqKOgA"
-            data-target="#myModal"
-          >
+            data-target="#myModal">
             <img src="./assets/img/ply.png" alt="" />
           </button>
         </div>
@@ -236,15 +282,13 @@
           class="item"
           style="
             background-image: url(https://img.youtube.com/vi/fPP7pga8GmE/maxresdefault.jpg);
-          "
-        >
+          ">
           <button
             type="button"
             class="video-btn play-button"
             data-toggle="modal"
             data-src="https://www.youtube.com/embed/fPP7pga8GmE"
-            data-target="#myModal"
-          >
+            data-target="#myModal">
             <img src="./assets/img/ply.png" alt="" />
           </button>
         </div>
@@ -253,15 +297,13 @@
           class="item"
           style="
             background-image: url(https://img.youtube.com/vi/-uWYEtedB9c/maxresdefault.jpg);
-          "
-        >
+          ">
           <button
             type="button"
             class="video-btn play-button"
             data-toggle="modal"
             data-src="https://www.youtube.com/embed/-uWYEtedB9c"
-            data-target="#myModal"
-          >
+            data-target="#myModal">
             <img src="./assets/img/ply.png" alt="" />
           </button>
         </div>
@@ -270,15 +312,13 @@
           class="item"
           style="
             background-image: url(https://img.youtube.com/vi/CkPHfEBuDgw/maxresdefault.jpg);
-          "
-        >
+          ">
           <button
             type="button"
             class="video-btn play-button"
             data-toggle="modal"
             data-src="https://www.youtube.com/embed/CkPHfEBuDgw"
-            data-target="#myModal"
-          >
+            data-target="#myModal">
             <img src="./assets/img/ply.png" alt="" />
           </button>
         </div>
@@ -287,15 +327,13 @@
           class="item"
           style="
             background-image: url(https://img.youtube.com/vi/40mAGJ6Kzl8/maxresdefault.jpg);
-          "
-        >
+          ">
           <button
             type="button"
             class="video-btn play-button"
             data-toggle="modal"
             data-src="https://www.youtube.com/embed/40mAGJ6Kzl8"
-            data-target="#myModal"
-          >
+            data-target="#myModal">
             <img src="./assets/img/ply.png" alt="" />
           </button>
         </div>
@@ -304,15 +342,13 @@
           class="item"
           style="
             background-image: url(https://img.youtube.com/vi/m2J0rBip81w/maxresdefault.jpg);
-          "
-        >
+          ">
           <button
             type="button"
             class="video-btn play-button"
             data-toggle="modal"
             data-src="https://www.youtube.com/embed/m2J0rBip81w"
-            data-target="#myModal"
-          >
+            data-target="#myModal">
             <img src="./assets/img/ply.png" alt="" />
           </button>
         </div>
@@ -338,8 +374,7 @@
             <img
               class="image"
               src="./assets/img/logo-client/BINUS.png"
-              alt=""
-            />
+              alt="" />
           </div>
           <div class="item">
             <img class="image" src="./assets/img/logo-client/GREE.png" alt="" />
@@ -348,22 +383,19 @@
             <img
               class="image"
               src="./assets/img/logo-client/TRISAKTI.jpg"
-              alt=""
-            />
+              alt="" />
           </div>
           <div class="item">
             <img
               class="image"
               src="./assets/img/logo-client/MondiBlanc.png"
-              alt=""
-            />
+              alt="" />
           </div>
           <div class="item">
             <img
               class="image"
               src="./assets/img/logo-client/BNI-logo.png"
-              alt="BNI"
-            />
+              alt="BNI" />
           </div>
         </div>
       </div>
@@ -372,9 +404,13 @@
     <footer>
       <h1>LIMAEMPAT PRODUCTION</h1>
       <div class="body-footer">
-        <p>
+        <p data-lang="id">
           Limaempat Production memberikan solusi untuk para perusahaan agar
           lebih efisien untuk penyebaran informasi yang sangatlah luas.
+        </p>
+        <p data-lang="en">
+          Limaempat Production provides solutions for companies to effectively
+          disseminate information widely.
         </p>
       </div>
       <div class="social-media">
@@ -398,54 +434,56 @@
       <button
         onclick="topFunction()"
         id="myBtn"
-        class="bg-white p-2 rounded-full text-black hover:bg-black hover:text-white"
-      >
+        class="bg-white p-2 rounded-full text-black hover:bg-black hover:text-white">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="4"
           stroke="currentColor"
-          class="w-6 h-6"
-        >
+          class="w-6 h-6">
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
-            d="M4.5 15.75l7.5-7.5 7.5 7.5"
-          />
+            d="M4.5 15.75l7.5-7.5 7.5 7.5" />
         </svg>
       </button>
     </div>
 
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/I18n.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/i18n-language@1.0.8/i18n-language.min.js"></script>
 
     <script>
-      const burger = document.querySelector(".burger");
-      const sidebar = document.querySelector(".sidebar");
-      const bgSidebar = document.querySelector(".bg-sidebar");
+      const burger = document.querySelector(".burger")
+      const sidebar = document.querySelector(".sidebar")
+      const bgSidebar = document.querySelector(".bg-sidebar")
 
       burger.addEventListener("click", function () {
-        this.classList.toggle("change");
-        sidebar.classList.toggle("change");
-        bgSidebar.classList.toggle("change");
-      });
+        this.classList.toggle("change")
+        sidebar.classList.toggle("change")
+        bgSidebar.classList.toggle("change")
+      })
 
       bgSidebar.addEventListener("click", function () {
-        this.classList.remove("change");
-        sidebar.classList.remove("change");
-        burger.classList.remove("change");
-      });
+        this.classList.remove("change")
+        sidebar.classList.remove("change")
+        burger.classList.remove("change")
+      })
 
       $(function () {
-        var current = location.pathname;
+        var current = location.pathname
         $("#nav-menu li a").each(function () {
-          var $this = $(this);
+          var $this = $(this)
           // if the current path is like this link, make it active
           if ($this.attr("href").indexOf(current) !== -1) {
-            $this.addClass("active");
+            $this.addClass("active")
           }
-        });
-      });
+        })
+      })
     </script>
 
     <!-- Modal -->
@@ -455,8 +493,7 @@
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
+      aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-body">
@@ -464,8 +501,7 @@
               type="button"
               class="close"
               data-dismiss="modal"
-              aria-label="Close"
-            >
+              aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
             <!-- 16:9 aspect ratio -->
@@ -475,8 +511,7 @@
                 src=""
                 id="video"
                 allowscriptaccess="always"
-                allow="autoplay"
-              ></iframe>
+                allow="autoplay"></iframe>
             </div>
           </div>
         </div>
